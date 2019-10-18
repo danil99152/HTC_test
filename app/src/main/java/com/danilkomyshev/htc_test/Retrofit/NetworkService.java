@@ -10,7 +10,7 @@ public class NetworkService {
     public static Retrofit getInstance(){
         if(ourInstance == null){
             ourInstance = new Retrofit.Builder()
-                    .baseUrl("http://www.mocky.io/v2/56fa31e0110000f920a72134/")
+                    .baseUrl("http://www.mocky.io/v2/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .build();

@@ -6,8 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.danilkomyshev.htc_test.Adapter.EmployeeAdapter;
-import com.danilkomyshev.htc_test.Models.Company;
+import com.danilkomyshev.htc_test.Adapter.Adapter;
+import com.danilkomyshev.htc_test.Models.JsonObject;
 import com.danilkomyshev.htc_test.Retrofit.JsonApi;
 import com.danilkomyshev.htc_test.Retrofit.NetworkService;
 
@@ -44,16 +44,16 @@ public class MainActivity extends AppCompatActivity {
         disposable.add(api.getCompany()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<Company>() {
+                .subscribe(new Consumer<JsonObject>() {
                     @Override
-                    public void accept(Company employees) throws Exception {
-                        displayData(employees);
+                    public void accept(JsonObject company) throws Exception {
+                        displayData(company);
                     }
                 }));
     }
 
-    private void displayData(Company company) {
-        EmployeeAdapter adapter = new EmployeeAdapter(company);
+    private void displayData(JsonObject company) {
+        Adapter adapter = new Adapter(company);
         recycler_posts.setAdapter(adapter);
     }
 

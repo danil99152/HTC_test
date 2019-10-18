@@ -7,12 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.danilkomyshev.htc_test.R;
 
-class EmployeeViewHolder extends RecyclerView.ViewHolder {
-    TextView name, phone, skills;
-    EmployeeViewHolder(View itemView){
+class ViewHolder extends RecyclerView.ViewHolder {
+    TextView companyName, name, phone, skills, age, competences;
+    ViewHolder(View itemView){
         super(itemView);
-        name = itemView.findViewById(R.id.name);
-
+        companyName = itemView.findViewById(R.id.companyName);
+        age  = itemView.findViewById(R.id.age);
+        competences = itemView.findViewById(R.id.competences);
 //        name = itemView.findViewById(R.id.name);
 //        phone = itemView.findViewById(R.id.phone);
 //        skills = itemView.findViewById(R.id.skills);
