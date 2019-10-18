@@ -27,11 +27,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //init api
         Retrofit retrofit = NetworkService.getInstance();
         api = retrofit.create(JsonApi.class);
 
-        //view
         recycler_posts = findViewById(R.id.recycler_posts);
         recycler_posts.setHasFixedSize(true);
         recycler_posts.setLayoutManager(new LinearLayoutManager(this));

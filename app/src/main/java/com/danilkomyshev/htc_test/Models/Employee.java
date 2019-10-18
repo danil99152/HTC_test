@@ -1,8 +1,14 @@
 package com.danilkomyshev.htc_test.Models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Employee {
+
     public String name;
+
+    @SerializedName("phone_number")
     public String phoneNumber;
+
     public String[] skills;
 
     public Employee(){
