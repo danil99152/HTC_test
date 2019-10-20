@@ -20,9 +20,9 @@ class ViewHolder extends RecyclerView.ViewHolder {
         companyName = itemView.findViewById(R.id.companyName);
         age  = itemView.findViewById(R.id.age);
         competences = itemView.findViewById(R.id.competences);
-        itemView = inflater.inflate(R.layout.employee, container, false);
-        name = itemView.findViewById(R.id.name);
-        phone = itemView.findViewById(R.id.phone);
-        skills = itemView.findViewById(R.id.skills);
+      //  itemView = inflater.inflate(R.layout.employee, container, false);
+//        name = itemView.findViewById(R.id.name);
+//        phone = itemView.findViewById(R.id.phone);
+//        skills = itemView.findViewById(R.id.skills);
     }
 }

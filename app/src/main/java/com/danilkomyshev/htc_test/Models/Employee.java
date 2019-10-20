@@ -15,6 +15,18 @@ public class Employee {
 
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setSkills(String[] skills) {
+        this.skills = skills;
+    }
+
     public Employee(String name, String phoneNumber, String[] skills) {
         this.name = name;
         this.phoneNumber = phoneNumber;

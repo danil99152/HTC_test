@@ -7,9 +7,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.danilkomyshev.htc_test.MainActivity;
 import com.danilkomyshev.htc_test.Models.Employee;
 import com.danilkomyshev.htc_test.Models.JsonObject;
 import com.danilkomyshev.htc_test.R;
+import com.danilkomyshev.htc_test.databinding.EmployeeBinding;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -48,9 +50,9 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
             }
         });
         for (Employee employee: employees) {
-            holder.name.setText(String.valueOf(employee.name));
-            holder.phone.setText(String.valueOf(employee.phoneNumber));
-            holder.skills.setText(Arrays.toString(employee.skills));
+            Employee employee2 = new Employee(employee.name, employee.phoneNumber, employee.skills);
+            EmployeeBinding binding = DataBindingUtil.setContentView(new MainActivity(), R.layout.employee);
+            binding.setEmployee(employee2);
         }
     }
 
